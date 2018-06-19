@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="student" class="com.codeplanet.beans.StudentBean">
+		<property name="sid" value="111"/>
+		<property name="sname" value="Mo Abjal"/>
+		<property name="saddr" value="Bareillly Up, India"/>
+		<property name="c">
+			<bean id="course" class="com.codeplanet.beans.Course">
+				<property name="cid" value="888"/>
+				<property name="cname" value="Spring Hibernate"/>
+				<property name="ccost" value="5000/-"/>
+			</bean>
+		</property>
+	</bean>        
+        
+</beans>
