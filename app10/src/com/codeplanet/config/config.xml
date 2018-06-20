@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="st" class="com.codeplanet.beans.Student">
+		<property name="sname" value="Mo Abjal"/>
+		<property name="saddr" value="Bareilly, Up India - 243006"/>
+		<property name="sclg" value="M.J.P. Rohilkhand Universoty Bareilly"/>
+	</bean>
+	<bean id="emp" class="com.codeplanet.beans.Employee">
+		<property name="ename" value="Afsar khan"/>
+		<property name="esal" value="50000/-"/>
+		<property name="eaddr" value="Bareilly UP, India - 243202"/>
+	</bean> 
+	<bean id="provider" class="com.codeplanet.beans.Provider" autowire="constructor">
+		
+		<!-- 
+		<property name="st">
+			<ref bean="st"/>
+		</property>
+		<property name="emp">
+			<ref bean="emp"/>
+		</property>
+		-->
+	</bean>
+	       
+
+</beans>
