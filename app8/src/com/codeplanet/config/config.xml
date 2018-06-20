@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="account" class="com.codeplanet.beans.Account">
+		<constructor-arg value="E-50520"/>
+		<constructor-arg value="Afsar khan"/>
+		<constructor-arg value="Savings"/>
+		<constructor-arg value="State Bank of India"/>
+	</bean>
+	<bean id="employee" class="com.codeplanet.beans.Employee">
+		<property name="ename" value="Rizwan and Raaz"/>
+		<property name="eBro">
+			<list>
+				<value>Afsar khan</value>
+				<value>Mohd Raaz</value>
+				<value>Mohd Raaz</value>
+				<value>MO Abjal</value>
+				<value>Dilshad</value>
+			</list>
+		</property>
+		<property name="eSis">
+			<set>
+				<value>Gulafsha</value>
+				<value>Shahnaz</value>
+				<value>Mahnaz</value>
+				<value>Noor Fatima</value>
+				<value>Gulafsha</value>
+			</set>
+		</property>
+		<property name="data">
+			<map>
+				<entry key="Student" value="YES"/>
+				<entry key="Male" value="YES"/>
+				<entry key="Muslim" value="YES"/>
+				<entry key="India" value="YES"/>
+				<entry key="Adult" value="YES"/>
+			</map>
+		</property>
+		<property name="courses">
+			<props>
+				<prop key="C">Saurabh Shukla</prop>
+				<prop key="C++">Saurabh Shukla</prop>
+				<prop key="Java">Saurabh Shukla and Nagoor Babu</prop>
+				<prop key="Advance Java">Durga</prop>
+				<prop key="Spring">Nagoor Babu</prop>
+			</props>
+		</property>
+		<property name="acc">
+			<ref bean="account" />
+		</property>
+	</bean>
+
+</beans>
