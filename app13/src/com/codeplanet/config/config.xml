@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="test" class="com.codeplanet.beans.TestBean">
+		<property name="tname" value="Java [Spring and Hibernate] Test" />
+		<property name="tstatus" value="Success" />
+		<property name="treason" value="To provide a Job"></property>
+	</bean>
+	<bean id="st" class="com.codeplanet.listeners.ContextStartedEventImpl" />
+	<bean id="rf" class="com.codeplanet.listeners.ContextRefreshedEventImpl" />
+	<bean id="cs" class="com.codeplanet.listeners.ContextClosedEventImpl" />
+	<bean id="stp" class="com.codeplanet.listeners.ContextStoppedEventImpl" />
+</beans>
